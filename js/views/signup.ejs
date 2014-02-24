@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/link.css">
+
+    <!-- Custom styles for this template -->
+  
+  </head>
+
+  <body>
+
+    <div class="container" ng-controller="SignupCtrl">
+        <h2 class="form-signin-heading">Please sign up</h2>
+        <input type="username" class="form-control" placeholder="Username" ng-model="username" required autofocus>
+        <br>
+        <input type="email" class="form-control" placeholder="Email address" ng-model="email" required autofocus>
+        <br>
+        <input type="password" class="form-control" placeholder="Password" ng-model="password" required>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" ng-click="send()"type="submit">Sign up</button>
+        <br>
+        <div class="alert alert-danger" ng-hide="err" ng-cloak><strong>Warning!</strong> Your login details are incorrect</div>
+      
+
+    </div> <!-- /container -->
+<% include pagetail %>

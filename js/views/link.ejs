@@ -1,0 +1,35 @@
+<% include pagehead %>
+
+  <div class="container" ng-controller="LinkPostCtrl">
+  	<div class="form-group">
+
+  	  <label>Link</label>
+  	  <input type="text" class="form-control" ng-model="link" placeholder="link url">
+
+  	  <br>
+
+  	  <label>Title</label>
+  	  <input type="text" class="form-control" ng-model="title" placeholder="title">
+
+  	  <br>
+
+  	  <label>Description</label>
+  	  <textarea class="form-control" ng-model="description" placeholder="enter description" rows="2"> </textarea>
+
+      <!---
+  	  <br>
+      <label>Tags</label>
+      <input type="text" class="form-control" ng-model="tags" placeholder="enter tags">-->
+      <br> 
+
+  	  <button type="submit" class="btn btn-default" ng-click="post()">Post</button>
+      <br>
+      <br>
+      <div class="alert alert-success" ng-hide="done" ng-cloak>Well Done!</div>
+      <div class="alert alert-danger" ng-hide="err" ng-cloak>Problem with Input</div>
+  	</div>
+  </div>
+
+
+
+<% include pagetail %>

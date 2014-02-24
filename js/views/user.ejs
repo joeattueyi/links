@@ -1,0 +1,27 @@
+<%include pagehead %>
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="media">
+        <h2><%= "Hi "+user+"!!" %></h2>
+      </div>
+    </div>
+   
+    <div class="col-xs-9" id="linkbox">
+       <h2>Links</h2>
+      <% for (var i=(data.length-1); i>=0; i--){
+        var a = data[i]; {%>
+        <div class="media">
+          <h4><%- link_to(a.link_title, a.link_url) %></h4>
+          <h6 class="text-right"><%= a.link_date.toDateString()%></h6>
+
+          <div class="media-body">
+          <p><%= a.link_description %></p>
+          </div>
+        </div>
+      <%}}%>
+    </div>
+</div>
+
+<% include pagetail %>
