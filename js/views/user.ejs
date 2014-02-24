@@ -13,8 +13,11 @@
       <% for (var i=(data.length-1); i>=0; i--){
         var a = data[i]; {%>
         <div class="media">
-          <h4><%- link_to(a.link_title, a.link_url) %></h4>
-          <h6 class="text-right"><%= a.link_date.toDateString()%></h6>
+          
+
+          <h4> <a href='<%= a.link_url %>' target="_blank"> <%= a.link_title %> </a></h4>
+
+          <h6 class="text-right"> <%= a.link_date.toDateString()%> </h6>
 
           <div class="media-body">
           <p><%= a.link_description %></p>
