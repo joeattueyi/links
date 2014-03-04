@@ -1,9 +1,10 @@
 <%include pagehead %>
+<br>
 <div class="container">
 
   <div class="row">
     <div class="col-xs-3">
-      <div class="media">
+      <div>
         <h2><%= "Hi "+user+"!!" %></h2>
       </div>
     </div>
@@ -12,9 +13,7 @@
        <h2>Links</h2>
       <% for (var i=(data.length-1); i>=0; i--){
         var a = data[i]; {%>
-        <div class="media">
-          
-
+        <div id="single-link">
           <h4> <a href='<%= a.link_url %>' target="_blank"> <%= a.link_title %> </a></h4>
 
           <h6 class="text-right"> <%= a.link_date.toDateString()%> </h6>
@@ -26,5 +25,8 @@
       <%}}%>
     </div>
 </div>
+
+<br>
+<br>
 
 <% include pagetail %>
