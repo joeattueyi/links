@@ -1,9 +1,9 @@
 mysql = require 'mysql'
 pool = mysql.createPool( 
-	host: 'testdb.cxploeysj4ic.us-west-2.rds.amazonaws.com',
+	host: 'localhost',
 	user: 'joeatt',
 	database: 'testdb'
-	password: 'qwerty123'
+	password: 'secret'
 )
 
 hash = require('./utils/nh').hasher

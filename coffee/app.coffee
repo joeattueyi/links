@@ -11,7 +11,7 @@ app.use express.bodyParser()
 app.use express.cookieParser('joey')
 app.use express.session()
 app.use cs
-	secret: 'koyinsolaabaniwonda'
+	secret: 'verysecret'
 	cookieName: 'sesh'
 	duration: 24*60*60*1000 
 
